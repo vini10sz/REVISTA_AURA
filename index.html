@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rev!sta Ma!a - Ass!ne Já</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon"> 
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logo Rev!sta Ma!a" class="logo">
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link" data-page="home">!níc!o</a>
+                <a href="#plans" class="nav-link cta-button" data-page="plans">Ass!nar Agora</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="container hero">
+                <div class="hero-text">
+                    <div class="mascot-box">
+                        <h2 class="mascot-headline">FL!P TE ENTREGA EM UM PULO</h2>
+                        <p class="mascot-subheadline">do Ma!a d!reto para sua casa 🐸</p>
+                    </div>
+
+                    <span class="badge">🛹 Ed!ção de Outubro</span>
+                    <h1>A Rev!sta Ma!a é gratu!ta.</h1>
+                    <h2>Pague só a taxa de entrega e receba a sua em casa!</h2>
+                    <p>Para sua comod!dade, cr!amos um plano de entrega para que você receba cada ed!ção nova no conforto da sua casa. A ed!ção de outubro já está pronta para você!</p>
+                    <button class="cta-button pulse" data-page="plans">Quero Receber em Casa</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/capa.jpg" alt="Capa Rev!sta Ma!a - Ed!ção Outubro">
+                    <div class="image-overlay">Ed!ção de Outubro</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="page hidden">
+            <div class="container">
+                <h2>Nossos Planos de Entrega</h2>
+                <p class="subtitle">Escolha o plano !deal para você e econom!ze. Receba a ed!ção de outubro e futuras gratu!tamente!</p>
+                <p class="delivery-warning large"><strong>Entregas de rev!sta gratu!tas d!sponíve!s apenas para Guarulhos, SP.</strong></p>
+                <div class="plans-container">
+                    
+                    <div class="plan-card">
+                        <h3>Plano de Entrega Mensal 🗓️</h3>
+                        <div class="price">R$ 10,00 <span>/ mês</span></div>
+                        <p>Taxa de entrega para 1 ed!ção (!nclu!ndo outubro).</p>
+                        <p class="plan-desc">Cobrança mensal.</p>
+                        <button class="cta-button" data-plan="Mensal" data-price="10.00">Escolher Plano Mensal</button>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <span class="popular-badge">⭐ Ma!s Popular</span>
+                        <h3>Plano de Entrega Tr!mestral 📦</h3>
+                        <div class="price">R$ 25,00 <span>/ tr!mestre</span></div>
+                        <p>Taxa de entrega para 3 ed!ções (!nclu!ndo outubro).</p>
+                        <p class="plan-desc">Você econom!za R$ 5,00!</p>
+                        <button class="cta-button" data-plan="Tr!mestral" data-price="25.00">Escolher Plano Tr!mestral</button>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <h3>Plano de Entrega Anual 🏆</h3>
+                        <div class="price">R$ 90,00 <span>/ ano</span></div>
+                        <p>Taxa de entrega para 12 ed!ções (!nclu!ndo outubro).</p>
+                        <p class="plan-desc">Você econom!za R$ 30,00!</p>
+                        <button class="cta-button" data-plan="Anual" data-price="90.00">Escolher Plano Anual</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout" class="page hidden">
+            <div class="container">
+                <h2>F!nal!zar Ped!do</h2>
+                
+                <div class="progress-bar">
+                    <div class="step active" id="progress-1">1. Seus Dados</div>
+                    <div class="step" id="progress-2">2. Endereço</div>
+                    <div class="step" id="progress-3">3. Pagamento</div>
+                    <div class="step" id="progress-4">4. Rev!são</div>
+                </div>
+
+                <div class="checkout-form">
+                    
+                    <div class="checkout-step active" id="step-1-info">
+                        <h3>1. Seus Dados Pesso!s</h3>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Melhor E-ma!l</label>
+                            <input type="email" id="email" placeholder="seu@ema!l.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+                        </div>
+                        <button class="cta-button" id="btn-next-step-2">Cont!nuar para Entrega</button>
+                    </div>
+
+                    <div class="checkout-step hidden" id="step-2-address">
+                        <h3>2. Endereço de Entrega</h3>
+                        <p class="delivery-warning"><strong>!mportante: A entrega da rev!sta é restr!ta a endereços em Guarulhos, SP.</strong></p>
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" placeholder="00000-000" maxlength="9">
+                            <small id="cep-loader" class="hidden">Buscando endereço...</small>
+                            </div>
+                        <div class="form-group">
+                            <label for="rua">Rua / Aven!da</label>
+                            <input type="text" id="rua" placeholder="Nome da sua rua">
+                        </div>
+                        <div class="form-group half">
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" placeholder="123">
+                        </div>
+                        <div class="form-group half">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" placeholder="Apto, Bloco, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Ba!rro</label>
+                            <input type="text" id="bairro" placeholder="Seu ba!rro">
+                        </div>
+                        <div class="form-group half">
+                            <label for="cidade">C!dade</label>
+                            <input type="text" id="cidade" placeholder="Sua c!dade" readonly>
+                        </div>
+                        <div class="form-group half">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" placeholder="Seu estado" readonly>
+                        </div>
+                        <button class="secondary-button" data-step-back="1">Voltar</button>
+                        <button class="cta-button" id="btn-next-step-3">!r para Pagamento</button>
+                    </div>
+
+                    <div class="checkout-step hidden" id="step-3-payment">
+                        <h3>3. Pagamento da Taxa de Entrega</h3>
+                        <div class="payment-tabs">
+                            <div class="tab active" data-tab="cartao">💳 Cartão de Créd!to</div>
+                            <div class="tab" data-tab="pix">📱 P!X</div>
+                            <div class="tab" data-tab="boleto">📄 Boleto</div>
+                        </div>
+
+                        <div class="payment-content active" id="tab-cartao">
+                            <div class="form-group">
+                                <label for="card-num">Número do Cartão</label>
+                                <input type="text" id="card-num" placeholder="0000 0000 0000 0000" maxlength="19">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Nome (como está no cartão)</label>
+                                <input type="text" id="card-name" placeholder="NOME SOBRENOME">
+                            </div>
+                            <div class="form-group half">
+                                <label for="card-valid">Val!dade (MM/AA)</label>
+                                <input type="text" id="card-valid" placeholder="12/28" maxlength="5">
+                            </div>
+                            <div class="form-group half">
+                                <label for="card-cvv">CVV</label>
+                                <input type="text" id="card-cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="payment-content hidden" id="tab-pix">
+                            <p>Pague com P!X para conf!rmar na hora!</p>
+                            <img src="images/PIX.png" alt="QR Code P!X S!mulado" class="qr-code">
+                            <p><strong>Chave Aleatór!a:</strong></p>
+                            <input type="text" value="00020126...c4a-4a2e-8b...a070415" readonly>
+                        </div>
+                        <div class="payment-content hidden" id="tab-boleto">
+                            <p>O boleto bancár!o será ex!b!do na tela de conf!rmação.</p>
+                            <p>Pagamentos v!a boleto podem levar até 3 d!as úte!s para serem conf!rmados.</p>
+                        </div>
+                        
+                        <button class="secondary-button" data-step-back="2">Voltar</button>
+                        <button class="cta-button" id="btn-next-step-4">Rev!sar Ped!do</button>
+                    </div>
+
+                    <div class="checkout-step hidden" id="step-4-review">
+                        <h3>4. Rev!se seu Ped!do</h3>
+                        <div class="review-summary">
+                            <h4>Resumo do Ped!do</h4>
+                            <p><strong>Seus Dados:</strong> <span id="review-nome"></span> (<span id="review-email"></span>)</p>
+                            <p><strong>Endereço de Entrega:</strong> <span id="review-endereco"></span></p>
+                            <p><strong>Plano Escolh!do:</strong> <span id="review-plano"></span> - !nclu! ed!ção de outubro.</p>
+                            <p class="delivery-warning review">Entrega para: <strong><span id="review-cidade"></span>, <span id="review-estado"></span></strong></p>
+                            <h4 class="total">Total: <span id="review-total"></span></h4>
+                        </div>
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">Entendo que estou pagando apenas pela taxa de entrega e que a rev!sta é gratu!ta.</label>
+                        </div>
+                        <button class="secondary-button" data-step-back="3">Voltar</button>
+                        <button class="cta-button" id="btn-confirm-order">Conf!rmar Pagamento</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="confirmation" class="page hidden">
+            <div class="container confirmation-box">
+                <img src="images/caixa.jpg" alt="Ca!xa da Rev!sta Ma!a" class="confirmation-image">
+                <h2>Tudo certo, <span id="confirm-name"></span>! 🎉</h2>
+                <p>Seu plano de entrega da Rev!sta Ma!a fo! at!vado com sucesso! 🚀</p>
+                <p>Seu ped!do s!mulado é o <strong>#MR-ENTREGA-12345</strong>.</p>
+                <p>Env!aremos sua pr!me!ra ed!ção gratu!ta (outubro) em breve para o endereço fornec!do.</p>
+                <button class="cta-button" data-page="home">Voltar para o !níc!o</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rev!sta Ma!a. Todos os d!re!tos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
