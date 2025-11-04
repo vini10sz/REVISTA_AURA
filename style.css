@@ -186,7 +186,7 @@ header .container {
 /* =======================
    HOME (HERO)
    ======================= */
-/* NOVO: Estilos do Mascote */
+/* Estilos do Mascote */
 .mascot-box {
     background: var(--white);
     border: 2px dashed var(--accent-green-instagram);
@@ -566,5 +566,27 @@ footer {
     }
     .progress-bar {
         font-size: 0.8rem;
+    }
+
+    /* --- CORREÇÃO DA BARRA DE PROGRESSO --- */
+    .progress-bar .step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px; /* Força altura igual */
+    }
+
+    /* --- CORREÇÃO DOS BOTÕES --- */
+    .checkout-form .cta-button,
+    .checkout-form .secondary-button {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px; /* Espaço entre eles */
+        text-align: center;
+    }
+    
+    .checkout-form .cta-button:last-of-type {
+        margin-bottom: 0; /* Remove margem do último botão */
     }
 }
