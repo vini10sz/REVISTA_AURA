@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.erro) {
                 clearAddressFields();
             } else {
-                ruaInput.value = data.logadouro;
+                ruaInput.value = data.logradouro;
                 bairroInput.value = data.bairro;
                 cidadeInput.value = data.localidade;
                 estadoInput.value = data.uf;
@@ -255,5 +255,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/^(\d{2})(\d)/g, '$1/$2')
             .replace(/(\d{2})\/?(\d{2})/, '$1/$2');
     }
+
 
 });
